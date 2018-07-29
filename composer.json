@@ -1,0 +1,61 @@
+{
+    "name": "yiisoft/yii2-app-advanced",
+    "description": "Yii 2 Advanced Project Template",
+    "keywords": ["yii2", "framework", "advanced", "project template"],
+    "homepage": "http://www.yiiframework.com/",
+    "type": "project",
+    "license": "BSD-3-Clause",
+    "support": {
+        "issues": "https://github.com/yiisoft/yii2/issues?state=open",
+        "forum": "http://www.yiiframework.com/forum/",
+        "wiki": "http://www.yiiframework.com/wiki/",
+        "irc": "irc://irc.freenode.net/yii",
+        "source": "https://github.com/yiisoft/yii2"
+    },
+    "minimum-stability": "stable",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git.immo:/repositories/pbr-lib-bel-common"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "yidas/yii2-composer-bower-skip": "*",
+        "yiisoft/yii2": ">=2.0.6",
+        "yiisoft/yii2-bootstrap": "*",
+        "yiisoft/yii2-swiftmailer": "*",
+        "php-amqplib/php-amqplib": "2.*",
+        "bariew/yii2-event-component": "*",
+        "cybercog/yii2-google-analytics": "~0.2",
+        "duccio/apns-php": "*",
+        "codemonkeys-ru/gcm-message": "*",
+        "phpdocumentor/reflection-docblock": "*",
+        "2amigos/yii2-ckeditor-widget": "^2.0",
+        "webtoucher/yii2-commands": "*",
+        "mobiledetect/mobiledetectlib": "^2.8",
+        "pbr24/lib-bel-common": ">=0.5.14",
+        "aotd/yii2-psr3-component": "dev-master"
+    },
+    "require-dev": {
+        "codeception/codeception": "*",
+        "yiisoft/yii2-debug": "*",
+        "yiisoft/yii2-gii": "*",
+        "yiisoft/yii2-faker": "*"
+    },
+    "config": {
+        "process-timeout": 1800,
+        "secure-http": false,
+        "fxp-asset": {
+            "installer-paths": {
+                "npm-asset-library": "vendor/npm",
+                "bower-asset-library": "vendor/bower"
+            }
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "cp -R repo/bower* vendor/"
+        ]
+    }
+}
